@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <style>
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#sketchBox {
+    padding-top: 20vh;
+    justify-content: center;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-rows: repeat(var(--grid-rows),35px);
+  grid-template-columns: repeat(var(--grid-cols),35px);
+}
+
+.grid-item {
+  height: 40px;
+  width: 40px;
+background-color: blanchedalmond;
+border:1px solid black;
+  text-align: center;
+}
+.grid-item:hover{
+    background-color: blue;
+}
+
+#clear{
+    background-color: crimson;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<div id="mainContainer">
+    <div id="sketchBox"> </div>
+<button id="clear" >clear</button>
+</div>
+
+<body>
+    <script>
+
+document.getElementById("mainContainer").style.cssText = "height: 100vh; width: 100vw; background-color: coral;"
+
+const container = document.getElementById("sketchBox");
+
+function makeRows(rows, cols) {
+  container.style.setProperty('--grid-rows', rows);
+  container.style.setProperty('--grid-cols', cols);
+  for (c = 0; c < (rows * cols); c++) {
+    let cell = document.createElement("div");
+
+    cell.addEventListener("mouseover", paint);
+    cell.addEventListener("click", erase);
+    document.getElementById("clear").addEventListener("click", erase);
+
+    container.appendChild(cell).className = "grid-item";
+
+    function paint (){
+        cell.style.cssText = "background-color: blue;"
+    };
+
+    function erase (){
+       cell.style.cssText = "background-color: blanchedalmond;"
+    };
+
+  };
+};
+
+makeRows(16, 16);
+
+
+
+
+    </script>
+</body>
+</html>
