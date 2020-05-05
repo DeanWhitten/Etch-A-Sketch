@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+#mainContainer{
+ display: flex;
+ align-items: center;
+ align-self: center;
+flex-direction: column;
+}
+
+:root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+#sketchBox {
+    padding-top: 20vh;
+    justify-content: center;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-rows: repeat(var(--grid-rows),5%);
+  grid-template-columns: repeat(var(--grid-cols),5%);
+}
+
+.grid-item {
+  height: 4vh;
+  width: 4vw;
+background-color: blanchedalmond;
+border:.009em solid black;
+  text-align: center;
+}
+.grid-item:hover{
+    background-color: blue;
+}
+
+
+#clear{
+    background-color: crimson;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
