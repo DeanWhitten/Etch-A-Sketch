@@ -16,9 +16,14 @@ flex-direction: column;
   --grid-rows: 1;
 }
 
+h1{
+  padding: 5vh;
+  font-size: 50px;
+  font-family: 'Permanent Marker', cursive;
+}
+
 #sketchBox {
-    padding-top: 20vh;
-    justify-content: center;
+  justify-content: center;
   display: grid;
   grid-gap: 1px;
   grid-template-rows: repeat(var(--grid-rows),5%);
@@ -26,24 +31,30 @@ flex-direction: column;
 }
 
 .grid-item {
-  height: 4vh;
-  width: 4vw;
+  height: 35px;
+  width: 35px;
 background-color: blanchedalmond;
 border:.009em solid black;
   text-align: center;
 }
 .grid-item:hover{
-    background-color: blue;
+    background-color: rgb(87, 27, 218);
 }
 
-
 #clear{
+  position: relative;
+  top: -50px;
     background-color: crimson;
-    margin: 10px;
     padding: 10px;
     font-size: 30px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     text-align: center;
+    color: beige;
+    transition: background-color .5s ease-in;
+}
+#clear:hover{
+  opacity: .8;
+  background-color: brown;
 }
