@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="mainContainer">
+        <h1>Etch-A-Sketch</h1>
+        
+        <div id="sketchBox"></div>
 
-  <div id="mainContainer">
-    <h1>Etch-A-Sketch</h1>
-      <div id="sketchBox"> </div>
-  
-  <form >
-    <button id="clear" >clear</button>
-  </form>
-  
-  </div>
+        <div id="buttonContainer">
+            <div id="gridLayoutContainer">
+                <h4>Grid Layout</h4>
+                <button id="smallGrid">64 x 64</button>
+                <button id="midGrid">32 x 32</button>
+                <button id="largeGrid">16 x16</button>
+            </div>
+        </div>
+    </div>
 
-<script src="scripts.js"></script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>

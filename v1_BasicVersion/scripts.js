@@ -21,9 +21,6 @@ function makeRows(rows, cols) {
 
     function erase (){
        cell.style.cssText = "background-color: blanchedalmond;"
-
-       
-
     };
 
   };
