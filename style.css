@@ -16,10 +16,10 @@
     align-items: center;
     text-align: center;
     background-image: linear-gradient(
-        rgba(255, 127, 80, 0.815),
-        rgba(255, 127, 80, 0.89),
-        rgba(255, 127, 80, 0.952),
-        coral
+        coral,
+        rgb(235, 119, 77),
+        rgb(218, 107, 67),
+        rgb(212, 106, 68)
     );
 }
 
@@ -46,9 +46,9 @@
     justify-content: center;
     background-image: linear-gradient(
         brown,
-        rgb(156, 40, 40),
-        rgb(146, 37, 37),
-        rgb(128, 34, 34)
+        rgb(134, 36, 36),
+        rgb(116, 30, 30),
+        rgb(117, 31, 31)
     );
     height: 80vh;
     width: 80vw;
